@@ -17,7 +17,7 @@ h3 {
 }
 
 p {
-    font-size: 1.35em;
+    font-size: 1.15em;
 }
 
 button {
@@ -65,16 +65,165 @@ header .contenedor {
     text-align: center;
     flex-direction: column;
     height: 90vh;
-    background-image: url('imagenes/AprendeCocina.png');
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url('imagenes/AprendeCocina.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    /*pensar color texto o imagen*/ 
+    
 }
 
 #hero h1 {color: white;}
 
 #presentation .contenedor {
     text-align: center;
-    padding: 200px 12px;
+    padding: 50px 12px;
 }
+
+#tiposDeRecetas {
+    background-color: rgb(30, 30,30);
+    color: white;
+    text-align: center;
+}
+
+#tiposDeRecetas .contenedor {
+    padding: 150px 0px;
+}
+
+#tiposDeRecetas h2 {
+    margin-top: 0;
+}
+#tiposDeRecetas p{
+    display: none;
+
+}
+
+#tiposDeRecetas .receta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+/* child para que como se llaman igual y 
+estan en un mismo lugar pueda configurar cada uno por aparte*/
+
+/*linear-gradient se uso para bajarle un poco el color a la imagen
+y así se pudiera ver la letra*/
+.receta:first-child{
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url('imagenes/Snacks.png');
+
+}
+
+.receta:nth-child(2){
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url('imagenes/RecetaVegetariana.png');
+}
+
+.receta:nth-child(3){
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url('imagenes/RecetaDiaria.png');
+}
+
+#Acceso2 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin: 22px;
+}
+
+footer{
+    background-color: rgb(30, 30,30);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+footer p {
+    margin: 3px;
+}
+
+@media screen and (min-width: 720px) {
+    header .contenedor {
+        
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #presentation .contenedor{
+        display: flex;
+        justify-content: center;
+        
+
+    }
+    
+    #presentation .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align:initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #presentation .ImgPresentation{
+        background-image: url('imagenes/Presentation.png');
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 500px;
+    }
+    
+    #tiposDeRecetas .tipos{
+        display:flex;
+        justify-content: center;
+        
+    }
+
+    #tiposDeRecetas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #tiposDeRecetas h3{
+        margin-top: 0;
+        
+    }
+
+    #tiposDeRecetas .receta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgb(50,50,50);
+        box-shadow: 2px 2px 10px #35313b;
+
+
+    }
+
+    footer {
+        padding: 24px;
+    }
+}
+
+
+
+
+ 
